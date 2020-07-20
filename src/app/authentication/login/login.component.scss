@@ -1,0 +1,67 @@
+.body-img {
+    background-image: url("/assets/img/login/background.jpg");
+     height: 100%; 
+     background-position: center;
+     background-repeat: no-repeat;
+    background-size: cover;
+}
+
+  .full {
+    height: 100%;
+    margin: 0;
+  }
+
+  .spacing {
+      padding-top: 43%;
+      padding-bottom: 60%;
+  }
+
+  .imag-spacing {
+    padding-bottom: 18px;
+    padding-left: 40px;
+    width: 500px;
+  }
+
+  .card {
+      padding: 0px;
+      border-radius: 0px;
+  }
+  .col-sm-4{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .col-sm {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .bg-card {
+      background-color: rgba(0, 0, 0, 0.904);
+  }
+
+  .bg-card-log {
+    background-color: rgb(0, 0, 0);
+}
+
+  .billy {
+    font-size: 10vh;
+  }
+  
+  .badge {
+    font-size: 3vh;
+    border: 2px solid white;
+  }
+  .spacing-text {
+    padding-top: 34%;
+    padding-bottom: 33%;
+  }
+
+  .text-padding-left {
+      padding-left: 210px;
+  }
+  .error {
+      color: red;
+  }
+  
+
+  

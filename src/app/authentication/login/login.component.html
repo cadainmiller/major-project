@@ -1,1 +1,61 @@
-<p>login works!</p>
+<div class=" full text-white ">
+    <div class="body-img container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card bg-card-log">
+                    <div class="card-body spacing">
+                        <img class="imag-spacing" src="/assets/img/logo/bc-logo.png" alt="">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group ">
+                                <label for="username">Username</label>
+                                <input [class.is-invalid]="
+                                (loginForm.get('username').touched|| submitted) &&
+                                loginForm.get('username').errors?.required
+                                " type="text" class="form-control" id="username" formControlName="username"
+                                    aria-describedby="usernameErr">
+                                <span *ngIf="
+                                (loginForm.get('username').touched|| submitted) &&
+                                loginForm.get('username').errors?.required
+                                " id="usernameErr" class="error">Please enter valid username</span>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="password">Password</label>
+                                <input [class.is-invalid]="
+                                (loginForm.get('password').touched|| submitted) &&
+                                loginForm.get('password').errors?.required
+                                " type="password" class="form-control" id="password" formControlName="password"
+                                    aria-describedby="passwordErr">
+                                <span *ngIf="
+                                (loginForm.get('password').touched|| submitted) &&
+                                loginForm.get('password').errors?.required
+                                " id="passwordErr" class="error">Please enter valid password.</span>
+                            </div>
+                            <div class="">
+                                <button type="submit" (click)="login();" class="btn btn-outline-primary">Login</button>
+                                <button class="btn btn-outline-danger ml-4">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card bg-card">
+                    <div class="card-body ">
+                        <div class="d-none d-md-flex spacing-text">
+                            <h2 class="billy text-padding-left">
+                                BILLY CRAIG
+                            </h2>
+                            <span class="badge badge-primary badge align-self-start">Online</span>
+                        </div>
+                        <p class="d-none d-md-block slogan font-italic">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
