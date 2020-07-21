@@ -1,5 +1,32 @@
-<div class="card">
-    <div class="card-body">
-        <p></p>
+<div class="">
+    <div class="card mt-6 body-img text-white ">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-8 padding-left">
+                    <form [formGroup]="resetForm">
+                        <h4>Please eneter email address</h4>
+                        <div class="input-group flex-nowrap">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="addon-wrapping">@</span>
+                            </div>
+                            <input [class.is-invalid]="
+                            (resetForm.get('email').touched|| submitted) &&
+                            resetForm.get('email').errors?.required
+                            " type="text" class="form-control" placeholder="jone@examole.com" aria-label="emailaddress"
+                                formControlName="email" aria-describedby="addon-wrapping">
+                            <button type="submit" (click)="resetpassword();"
+                                class="btn btn-outline-primary ml-4">Reset</button>
+                        </div>
+                        <div>
+                            <span *ngIf="
+                            (resetForm.get('email').touched|| submitted) &&
+                            resetForm.get('email').errors?.required
+                            " id="passwordErr" class="error">Please enter valid email address.</span>
+                        </div>
+                    </form>
+                    <p class="mt-4">have an account? <a [routerLink]="['/login']">sign here</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
