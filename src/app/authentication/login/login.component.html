@@ -31,7 +31,7 @@
                                 loginForm.get('password').errors?.required
                                 " id="passwordErr" class="error">Please enter valid password.</span>
                             </div>
-                            <p class="mt-2 mb-4"><a [routerLink]="['/reset']">Forgot Password?</a></p>
+                            <p class="mt-2 mb-4"><a [routerLink]="['auth/reset']">Forgot Password?</a></p>
                             <div class="">
                                 <button type="submit" (click)="login();" class="btn btn-outline-primary">Login</button>
                                 <button class="btn btn-outline-danger ml-4">Cancel</button>
