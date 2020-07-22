@@ -4,8 +4,8 @@
         <div class="sidebar-heading text-white d-flex align-items-center">
             <ion-icon class="mr-2" name="close"></ion-icon>Billy Craig
         </div>
-        <div class="list-group list-group-flush text-white">
-            <a href="#" class="list-group-item list-group-item-action text-white bg-dark">
+        <div class="list-group list-group-flush text-white d-flex align-items-center ">
+            <a href="#" class="list-group-item list-group-item-action text-white bg-dark ">
                 <ion-icon class="mr-2" name="clipboard"></ion-icon>Dashboard
             </a>
             <a href="#" class="list-group-item list-group-item-action text-white bg-dark">
@@ -29,7 +29,7 @@
         <div class="d-none d-lg-block ">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a *ngIf="!show" class="navbar-brand text-white d-flex align-items-center logo-size" id="menu-toggle">
-                    <ion-icon (click)="toggle()" class=" mr-1" name="chevron-forward"></ion-icon>Billy Craig
+                    <ion-icon (click)="toggle()" class=" mr-1" name="menu"></ion-icon>Billy Craig
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -54,44 +54,80 @@
         <div class="d-block d-sm-none">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Billy Craig</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-              
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reports</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-              </nav>
+            </nav>
         </div>
 
 
         <div class="container-fluid">
-            <h1 class="mt-4">Simple Sidebar</h1>
-            <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-                larger screens. When toggled using the button below, the menu will change.</p>
-            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is
-                optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which
-                will toggle the menu when clicked.</p>
+            <!-- two top cards -->
+            <div class="row mt-2">
+                <div class="col-sm-6">
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end top cards -->
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <ag-grid-angular style="width: 500px; height: 500px;" class="ag-theme-alpine"
+                            [rowData]="rowData" [columnDefs]="columnDefs">
+                        </ag-grid-angular>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
 
 </div>
 <!-- /#wrapper -->
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+    </div>
+</footer>
