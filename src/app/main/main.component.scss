@@ -2,6 +2,10 @@ body {
     overflow-x: hidden;
   }
   
+  #nav {
+      padding: 0px;
+  }
+  
   #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
@@ -12,7 +16,7 @@ body {
   }
   
   #sidebar-wrapper .sidebar-heading {
-    padding: 0.875rem 1.25rem;
+    padding: 0.880rem 1.25rem;
     font-size: 1.2rem;
   }
   
@@ -41,4 +45,12 @@ body {
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -15rem;
     }
+  }
+  .logo-size {
+      font-size: 25px;
+  }
+
+  ion-icon {
+    font-size: 2rem;
+    color: white;
   }

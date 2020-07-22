@@ -11,10 +11,13 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
+    
+  }
+
+  public show = false;
+
+  toggle() {
+    this.show = !this.show;
   }
 
 }
