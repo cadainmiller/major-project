@@ -1,12 +1,4 @@
-body {
-    overflow-x: hidden;
-  }
-  
-  #nav {
-      padding: 0px;
-  }
-  
-  #sidebar-wrapper {
+#sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
     -webkit-transition: margin .25s ease-out;
@@ -21,7 +13,7 @@ body {
   }
   
   #sidebar-wrapper .list-group {
-    width: 15rem;
+    //width: 15rem;
   }
   
   #page-content-wrapper {
@@ -49,27 +41,9 @@ body {
   .logo-size {
       font-size: 25px;
   }
-  
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
 
-  .btn {
-    border-radius: 1.2rem;
-  }
 
   ion-icon {
     font-size: 2rem;
     color: white;
   }
-
-@import "../../../node_modules/ag-grid-community/src/styles/ag-grid.scss";
-@import "../../../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
-
-.ag-theme-alpine {
-    @include ag-theme-alpine();
-}

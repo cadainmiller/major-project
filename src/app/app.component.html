@@ -1,1 +1,46 @@
-<router-outlet></router-outlet>
+<div class="d-block d-sm-none">
+    <div class="row">
+        <header class="col-12">
+            <app-navbar></app-navbar>
+        </header>
+        <div class="col-12 main">
+            <div class="" *ngIf="show">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none d-md-block d-lg-block">
+    <div class="row-12">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="row">
+        <aside class="col-2">
+            <app-sidebar> </app-sidebar>
+        </aside>
+        <div class="col-10 main">
+            <div class=" d-sm-none bg-dark">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="!show">
+                <router-outlet></router-outlet>
+            </div>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
